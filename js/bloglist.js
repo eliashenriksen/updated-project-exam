@@ -5,6 +5,8 @@ const bloglistH1 = document.querySelector(".bloglistH1");
 
 const apiLinkAllPosts = "https://ehtoday.one/assignments/dand/wp-json/wp/v2/posts?_embed";
 
+//https://ehtoday.one/assignments/dand/wp-json/wp/v2/posts?search=handbook
+
 async function allPostFetcher(inputApiLink) {
 
     try {
