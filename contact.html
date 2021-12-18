@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="On this page, you can contact us at D&D." />
+    <title>D&D | Contact</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="images/favicon.png" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ea0c31a3df.js" crossorigin="anonymous"></script>
+    <!-- Hotjar Tracking Code for https://ehprojectexam.netlify.app/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj =
+                h.hj ||
+                function () {
+                    (h.hj.q = h.hj.q || []).push(arguments);
+                };
+            h._hjSettings = { hjid: 2729256, hjsv: 6 };
+            a = o.getElementsByTagName("head")[0];
+            r = o.createElement("script");
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="headerLogo">
+            <img src="images/DandDlogo.png" alt="Design & development logo." />
+            <p>A blog about design and development.</p>
+        </div>
+        <label class="hamburger" for="hamburger-menu"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" id="hamburger-menu">
+        <nav>
+            <ul>
+                <li>
+                    <div class="mainNavLi"><a href="index.html">Home</a></div>
+                </li>
+                <li>
+                    <div class="mainNavLi"><a href="bloglist.html">Posts</a></div>
+                </li>
+                <li>
+                    <div class="mainNavLi"><a href="about.html">About</a></div>
+                </li>
+                <li>
+                    <div class="mainNavLi"><a href="contact.html" class="currentPage">Contact</a></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contactusMain">
+        <section class="contactusContentWrapper">
+            <h1>Contact us!</h1>
+            <form id="contactForm" autocomplete="off">
+                <p class="contactFormErrors contactNameError">Please enter a name! (More than 5 characters)</p>
+                <div class="contactFormWrappers">
+                    <input type="text" name="name" id="contactName" placeholder="Name" class="contactFormInputs" autocomplete="off">
+                </div>
+                <p class="contactFormErrors contactEmailError">Please enter a valid e-mail adress!</p>
+                <div class="contactFormWrappers">
+                    <input type="text" name="email" id="contactEmail" placeholder="E-mail" class="contactFormInputs"
+                        autocomplete="off">
+                </div>
+                <p class="contactFormErrors contactSubjectError">Please enter a subject! (More than 15 characters)</p>
+                <div class="contactFormWrappers">
+                    <input type="text" name="subject" id="contactSubject" placeholder="Subject" class="contactFormInputs" autocomplete="off">
+                </div>
+                <p class="contactFormErrors contactContentError">Please enter your message! (More than 25 characters)</p>
+                <div class="contactFormWrappers">
+                    <textarea name="commentContent" id="contactContent" rows="5" cols="20" placeholder="Your message"
+                        class="contactFormInputs"></textarea>
+                </div>
+                <button class="contactFormSubmitButton buttons">Submit form</button>
+            </form>
+        </section>
+        <div class="messageBox"></div>
+    </main>
+    <footer>
+        <p>©DanD - 2021</p>
+    </footer>
+    <div class="backgroundDotsHolder">
+        <div class="backgroundDots"></div>
+    </div>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
