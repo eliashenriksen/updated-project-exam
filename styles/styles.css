@@ -189,6 +189,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-self: flex-end;
   width: 100%;
   height: 100px;
   box-shadow: 0px 5px 6px #00000045;
@@ -294,6 +295,11 @@ footer p {
   font-weight: bold;
 }
 
+.homeArrowLeft,
+.homeArrowRight {
+  display: none;
+}
+
 .homeArrows:hover {
   color: var(--brandedRed);
   cursor: pointer;
@@ -345,7 +351,7 @@ footer p {
 #bloglistMain {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 10rem;
 }
@@ -355,6 +361,10 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.searchWrapper {
+  display: none;
 }
 
 .bloglistPostBlock {

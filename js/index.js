@@ -21,6 +21,8 @@ async function allPostFetcher(inputApiLink) {
         const postsBeingShown = firstResponse.length;
 
         homeCarouselHolder.innerHTML = "";
+        homeArrowLeft.style.display = "block";
+        homeArrowRight.style.display = "block";
 
         for (let i = 0; i < firstResponse.length; i++) {
 

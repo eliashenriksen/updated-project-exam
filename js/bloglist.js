@@ -2,6 +2,9 @@ const bloglistPostHolder = document.querySelector(".bloglistPostHolder");
 const loadMorePostsButton = document.querySelector(".loadMorePostsButton");
 const postCountTracker = document.querySelector(".postCountTracker");
 const bloglistH1 = document.querySelector(".bloglistH1");
+const searchPostsButton = document.querySelector(".searchPostsButton");
+const searchInput = document.querySelector(".searchInput");
+const searchWrapper = document.querySelector(".searchWrapper");
 
 const apiLinkAllPosts = "https://ehtoday.one/assignments/dand/wp-json/wp/v2/posts?_embed";
 
@@ -21,6 +24,7 @@ async function allPostFetcher(inputApiLink) {
         bloglistH1.innerHTML = "Posts";
         bloglistPostHolder.innerHTML = "";
         loadMorePostsButton.style.display = "flex";
+        searchWrapper.style.display = "block";
         postCountTracker.innerHTML = `
             <p>Showing ${postsBeingShown} out of ${totalNumberOfPostsAvailable}</p>
         `;
@@ -55,6 +59,9 @@ let postsPerPageNumber = 20;
 loadMorePostsButton.addEventListener("click", postCleaner);
 loadMorePostsButton.addEventListener("click", () => {allPostFetcher(apiLinkAllPosts + `&per_page=${postsPerPageNumber}`)});
 loadMorePostsButton.addEventListener("click", postPerPageNumberIncrease);
+
+searchPostsButton.addEventListener("click", postCleaner);
+searchPostsButton.addEventListener("click", () => {allPostFetcher(apiLinkAllPosts + `&search=${searchInput.value}`)})
 
 function postCleaner() {
     bloglistPostHolder.innerHTML = "";
